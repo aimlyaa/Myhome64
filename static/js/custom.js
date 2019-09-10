@@ -1,3 +1,5 @@
+var swiper = new Swiper('.swiper-container');
+
 window.onscroll = function() {myFunction()};
 
 var header = document.getElementById("headerMenu");
