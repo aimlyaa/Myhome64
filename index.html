@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="static/css/bootstrap.min.css">
         <link rel="stylesheet" href="static/css/index.css">
+        <link rel="stylesheet" href="static/css/swiper.min.css">
         <style>
             @font-face {
                 font-family: Segoe UI; 
@@ -28,26 +29,26 @@
         <container>
             <!-- шапка сайта -->
             <div class="col-xl-8 col-sm-12 offset-xl-2">
-                <div class="row pt-2 pl-md-1 pb-md-1 p-0">
+                <div class="row pt-2">
                     <!-- logo -->
-                    <div class="col-md-3 d-none d-md-flex align-items-center justify-content-center align-items-md-start justify-content-md-start mt-2">
-                        <img style="height: 7.5rem;" src="static/media/logo.png">
+                    <div class="col-md-3 d-none d-md-flex align-items-center justify-content-center align-items-md-start justify-content-md-start">
+                        <img class="adaptive-logo" src="static/media/logo.png">
                     </div>
                     <!-- title -->
-                    <div class="col-md-6 offset-xl-3 offset-sm-0 text-center pt-xl-2 pt-md-1 pr-xl-0 m-0 pl-xl-1">
-                        <p class ="d-inline-block m-0" style="font-size: 2.25rem;">Строительство каркасных домов<br>
-                                <b style="font-size: 2.25rem;">«Под Ключ»</b></p>
+                    <div class="col-md-6 offset-xl-3 offset-sm-0 text-center m-0 d-flex align-items-center justify-content-center">
+                        <p class ="w-100 pl-1 pr-1 adaptive-name d-inline-block m-0">Строительство каркасных домов<br>
+                                <b>«Под Ключ»</b></p>
                     </div>
                     <!-- contacts -->
-                    <div class="col-md-3 col-sm-4 m-0 pl-sm-0 pt-1 text-center text-xl-right">
-                        <p class ="w-100 mb-0" style="font-size: 1.1rem;">г. Балаково</p>
-                        <p class ="w-100 mb-0" style="font-size: 2.15rem;"><b><span style="color: #d64448;">8 (967)</span> 5000-400</b></p>
-                        <p class ="w-100 mb-0" style="font-size: 2.15rem;"><b><span style="color: #d64448;">8 (8453)</span> 340-400</b></p>
-                        <p class ="pb-1 pb-md-0 w-100 mb-0" style="font-size: 1.1rem;color: #d64448;">moydom64@gmail.com</p>
+                    <div class="col-md-3 col-sm-4 m-0 pl-sm-0 text-center text-xl-right">
+                        <p class ="adaptive-header w-100 mb-0" style="font-size: 1.1rem;">г. Балаково</p>
+                        <p class ="adaptive-header w-100 mb-0"><b><span style="color: #d64448;">8 (967)</span> 5000-400</b></p>
+                        <p class ="adaptive-header w-100 mb-0"><b><span style="color: #d64448;">8 (8453)</span> 340-400</b></p>
+                        <p class ="adaptive-header pb-1 pb-md-0 w-100 mb-0" style="font-size: 1.1rem;color: #d64448;">moydom64@gmail.com</p>
                     </div>
                 </div>
                 <!-- Оставь заявку сейчас... -->
-                <div class="row m-0 p-0 w-100" id= "main" style="background-image: url('static/media/bg.png');background-size:cover;">
+                <div class="row m-0 p-0 w-100 adaptive-bg" id= "main">
                     <div class="col-md-4 col-sm-12 offset-md-8">
                         <p class="text-center text-white mb-4 pt-3 pr-1" style="font-size: 1.3rem;text-shadow: 2px 2px 2px darkgrey;">
                             Оставь заявку сейчас<br>
@@ -115,7 +116,8 @@
                             data-target="#myModal">
                             <b>Хочу свой дом</b>
                         </button>
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <!-- модальное окно -->
+                        <div class="modal fade mt-5" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content bg-light pt-3 pl-3 pr-3 p pb-0">
                                     <div class="modal-header p-0 pb-3">
@@ -144,44 +146,36 @@
                     <div class="col-12">
                         <p class="text-center pt-lg-3" style="font-size: 2.4rem;">Компания “Мой Дом” - это</p>
                     </div>
-                    <div class="col-6 col-md-3 mt-4 mt-md-0">
-                        <div class="row w-100 d-flex justify-content-center m-0">
-                            <div class="row d-flex align-items-center justify-content-center rounded-circle m-0" style="background-color: #f6da3e; height: 12rem;width: 12rem;">
-                                <img class="h-50 w-50 pl-1 pr-1" src="static/media/shield.png">
-                            </div>
+                    <div class="col-6 col-md-3 mt-md-0 d-flex align-items-center flex-column">
+                        <div class="d-flex align-items-center justify-content-center rounded-circle m-0" style="background-color: #f6da3e; height: 11rem; width: 11rem;">
+                            <img class="h-50 w-50" src="static/media/shield.png">
                         </div>
                         <div class="row d-flex justify-content-center">
-                            <p class="w-75 text-center mt-1"><b>Гарантия 10 лет на материалы и работы!</b></p>
+                            <p class="w-75 text-center mt-1"><b style="font-size: 1.1rem;">Гарантия 10 лет на материалы и работы!</b></p>
                         </div>
                     </div>
-                    <div class="col-6 col-md-3">
-                        <div class="row w-100 d-flex justify-content-center m-0">
-                            <div class="row d-flex align-items-center justify-content-center rounded-circle m-0" style="background-color: #d64448; height: 12rem;width: 12rem;">
-                                <img class="h-50 w-50 pl-1 pr-1" src="static/media/coin.png">
-                            </div>
+                    <div class="col-6 col-md-3 mt-md-0 d-flex align-items-center flex-column">
+                        <div class="d-flex align-items-center justify-content-center rounded-circle m-0" style="background-color: #d64448; height: 11rem; width: 11rem;">
+                            <img class="h-50 w-50" src="static/media/coin.png">
                         </div>
                         <div class="row d-flex justify-content-center">
-                            <p class="w-75 text-center mt-1"><b>Низкая стоимость – высокое качество!</b></p>
+                            <p class="w-75 text-center mt-1"><b style="font-size: 1.1rem;">Низкая стоимость – высокое качество!</b></p>
                         </div>
                     </div>
-                    <div class="col-6 col-md-3">
-                        <div class="row w-100 d-flex justify-content-center m-0">
-                            <div class="row d-flex align-items-center justify-content-center rounded-circle m-0" style="background-color: #0e986c; height: 12rem;width: 12rem;">
-                                <img class="h-50 w-50 pl-1 pr-1" src="static/media/pen.png">
-                            </div>
+                    <div class="col-6 col-md-3 mt-md-0 d-flex align-items-center flex-column">
+                        <div class="d-flex align-items-center justify-content-center rounded-circle m-0" style="background-color: #0e986c; height: 11rem; width: 11rem;">
+                            <img class="h-75 w-50" src="static/media/pen.png">
                         </div>
                         <div class="row d-flex justify-content-center">
-                            <p class="w-75 text-center mt-1"><b>Лучшие готовые <br> проекты для Вас!</b></p>
+                            <p class="w-75 text-center mt-1"><b style="font-size: 1.1rem;">Лучшие готовые проекты для Вас!</b></p>
                         </div>
                     </div>
-                    <div class="col-6 col-md-3">
-                        <div class="row w-100 d-flex justify-content-center m-0">
-                            <div class="row d-flex align-items-center justify-content-center rounded-circle m-0" style="background-color: #df7f03; height: 12rem;width: 12rem;">
-                                <img class="h-50 w-50 pl-1 pr-1" src="static/media/timer.png">
-                            </div>
+                    <div class="col-6 col-md-3 mt-md-0 d-flex align-items-center flex-column">
+                        <div class="d-flex align-items-center justify-content-center rounded-circle m-0" style="background-color: #df7f03; height: 11rem; width: 11rem;">
+                            <img class="h-50 w-50" src="static/media/timer.png">
                         </div>
                         <div class="row d-flex justify-content-center">
-                            <p class="w-75 text-center mt-1"><b>Готовый дом <br> всего за 2 месяца</b></p>
+                            <p class="w-100 text-center mt-1"><b style="font-size: 1.1rem;">Готовый дом<br>всего за 2 месяца</b></p>
                         </div>
                     </div>
                     <!-- прееимущества наших домов -->
@@ -254,20 +248,20 @@
                     </div>
                 </div>
                 <!-- Наши приимущества -->
-                <div class="row pt-0 pt-md-3 m-0 d-flex" style="background-image: url(static/media/bg3.png);background-size:cover;">
-                    <div class="col-12 col-md-4 offset-md-4 text-center">
-                        <p class="mb-1" style="font-size: 2rem; color: #f6da3e;">Наши преимущества</p>
-                        <p class="mb-1" style="font-size: 1.6rem; color: white;">Цена на дом не превышает стоимость квартиры</p>
-                        <p class="mb-2" style="font-size: 1.6rem; color: white;">
-                            Дом “Под Ключ” за 2 месяца
-                            <span style="font-size: 1.5rem;">(столько же у Вас уйдет на оформление купленной квартиры)</span>
+                <div class="adaptive-bg-3 row pt-0 pt-md-3 m-0 d-flex">
+                    <div class="col-12 col-xl-4 offset-xl-4 text-center">
+                        <p class="mb-1 text-center" style="font-size:2.1rem;color: #f6da3e;">Наши преимущества</p>
+                        <p class="mb-1 mt-xl-3" style="color: white;"><img src="static/media/listStyleRed.png"> Цена на дом не превышает стоимость квартиры</p>
+                        <p class="mb-2" style="color: white;">
+                            <img src="static/media/listStyleRed.png"> Дом “Под Ключ” за 2 месяца
+                            (столько же у Вас уйдет на оформление купленной квартиры)
                         </p>
-                        <p style="font-size: 1.3rem; color: white;">
-                            Оставьте свои данные и мы <span style="color: red; font-size: 1.5rem;">совершенно бесплатно</span> разработаем для Вас <b style="font-size: 1.4rem;">3D макет</b> Вашего будущего дома
+                        <p class="text-white pr-xl-5 mr-xl-3 mt-xl-3 pt-xl-4">
+                            <br>Оставьте свои данные и мы <b>совершенно бесплатно</b> разработаем для Вас <b>3D макет</b> Вашего будущего дома
                         </p>
                     </div>
-                    <div class="col-12 col-md-4 m-0">
-                        <p class="text-center text-white mb-4 pt-5 pr-1" style="font-size: 1.1rem;text-shadow: 2px 2px 2px darkgrey;">
+                    <div class="col-12 col-xl-4 m-0">
+                        <p class="text-center text-white mb-4 pt-1 pt-xl-5 pr-1" style="text-shadow: 2px 2px 2px darkgrey;">
                                 Оставь заявку сейчас<br>
                                 и получи<br>
                                 3D модель своего дома<br>
@@ -284,8 +278,84 @@
                     </div>
                 </div>
                 <!-- Готовые проекты -->
-                <div class="row pt-0 pt-md-3 m-0 d-flex" style="background-image: url(static/media/bg4.png);background-size:cover;">
-                        <p class="w-100 text-center" style="font-size: 1.8rem;"><b>ГОТОВЫЕ ПРОЕКТЫ</b></p>
+                <div class="row pt-0 pt-md-3 m-0 d-flex" style="background-image: url(static/media/bg4.png);background-size:cover; background-position:center;">
+                    <p class="w-100 text-center" style="font-size: 1.8rem;"><b>ГОТОВЫЕ ПРОЕКТЫ</b></p>
+                    <div class="col-2 d-none d-sm-flex align-items-center flex-row-reverse" id="prev">
+                        <img class="h-25" style="transform: scaleX(-1);" src="static/media/arrow.png">
+                    </div>
+                    <div class="col-12 col-md-8 m-0 p-0 pb-4 mb-4" id="photos">
+                        <div class="adaptive-slides swiper-container m-0 border border-secondary">
+                            <!-- Слайды домов -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/1.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/2.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/3.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/4.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/5.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/6.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/7.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/9.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/10.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/11.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/12.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/13.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/14.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/15.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>                                <div class="swiper-slide" style="background-image:url(static/media/homes/17.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/18.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/19.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/21.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/22.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/24.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/25.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/29.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/30.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                                <div class="swiper-slide" style="background-image:url(static/media/homes/31.jpg); background-size:100% 100%; background-position:center; background-repeat: no-repeat"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 d-none d-sm-flex align-items-center">
+                        <img class="h-25" src="static/media/arrow.png" id="next">
+                    </div>
+                </div>
+                <!-- профессиональное создание... -->
+                <div class="row pt-0 pt-md-3 m-0 d-flex align-items-center justify-content-center">
+                    <div class="col-md-4 m-0 p-0" style="font-size: 1.1rem;">
+                        <div class="d-flex align-items-center align-items-center flex-column">
+                            <img src="static/media/proekti-ico1.png">
+                            <p class="text-center w-50"><b>Профессиональное создание проектов на компьютере</b></p>
+                        </div> 
+                    </div>
+                     <div class="col-12 col-md-4 m-0 p-0">
+                        <div class="d-flex align-items-center align-items-center flex-column">
+                            <img src="static/media/proekti-ico2.png">
+                            <p class="text-center w-50"><b>Тщательное прорабатывание всех мелочей</b></p>
+                        </div>  
+                    </div>
+                    <div class="col-12 col-md-4 m-0 p-0">
+                        <div class="d-flex align-items-center align-items-center flex-column">
+                            <img src="static/media/proekti-ico3.png">
+                            <p class="text-center w-50"><b>Огромное количество готовых проектов разной площади</b></p>
+                        </div>  
+                    </div>
+                    <div class="col-12 col-md-4 p-0 mt-4">
+                        <div class="d-flex align-items-center align-items-center flex-column">
+                            <img src="static/media/proekti-ico4.png">
+                            <p class="text-center w-50"><b>Оригинальные проекты от нашего опытного дизайнера БЕСПЛАТНО!</b></p>
+                        </div> 
+                    </div>
+                    <div class="col-12 col-md-4 p-0 mt-4">
+                        <div class="d-flex align-items-center align-items-center flex-column">
+                            <img src="static/media/proekti-ico5.png">
+                            <p class="text-center w-50"><b>Учет всех пожеланий и требований заказчика</b></p>
+                        </div> 
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-warning mt-2 w-100 border-0 rounded-0 p-3 mb-5" style="font-size: 1.8rem;" data-toggle="modal" data-target="#myModal"><b>Оставить заявку</b></button>
+                    </div>
+                </div>
+                <div class="row pt-0 pt-md-3 m-0 d-flex align-items-center justify-content-center" style="background-image:url(static/media/bg5.png); background-size:100% 100%; background-position:center; background-repeat: no-repeat">
+
                 </div>
             </div>
         </container>
@@ -293,6 +363,6 @@
     <script src="static/js/jquery.min.js"></script>
     <script src="static/js/popper.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
-    <script src="static/js/custom.js"></script>
     <script src="static/js/swiper.min.js"></script>
+    <script src="static/js/custom.js"></script>
 </html>

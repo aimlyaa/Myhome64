@@ -1,4 +1,18 @@
-var swiper = new Swiper('.swiper-container');
+var mySwiper = new Swiper('.swiper-container', {
+    speed: 400,
+    spaceBetween: 0,
+    loop:true,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+      },
+});
+$('#prev').click(function(){
+    mySwiper.slidePrev();
+});
+$('#next').click(function(){
+    mySwiper.slideNext();
+});
 
 window.onscroll = function() {myFunction()};
 
@@ -21,7 +35,7 @@ $('#mainBtn').click(function(){
 });
 $('#photosBtn').click(function(){
     $('html,body').animate({
-        scrollTop: $("#photos").offset().top-$('#photos').innerHeight()/6
+        scrollTop: $("#photos").offset().top-$('#photos').innerHeight()/4
     }, 'slow');
 });
 $('#guaranteeBtn').click(function(){

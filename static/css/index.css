@@ -1,3 +1,7 @@
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
 .sticky {
     background-color: #fde34c;
     position: fixed;
@@ -5,4 +9,75 @@
     top: 0;
     width: 100%;
     z-index: 9999;
+}
+/* adaptive */
+@media only screen and (min-width: 0px) {
+  .adaptive-slides {
+    width: 100%;
+    height: 15rem;
   }
+  .adaptive-bg-3{
+    background-size:cover;
+    background-image: url('../media/bg3-sm.png');
+  }
+  .adaptive-bg-3 p{
+    text-align: justify;
+    color: #f8f9fa;
+    font-size: 1.2rem;
+  }
+  .adaptive-name{
+    font-size: 1.4rem;
+    background-color: #f8f9fa;
+  }
+  .adaptive-header{
+    font-size: 1.6rem;
+    background-color: #f8f9fa;
+  }
+  .adaptive-bg{
+    background-size:cover;
+    background-image: url('../media/bg-sm.png');
+  }
+}
+@media only screen and (min-width: 540px) {
+  .adaptive-slides {
+    height: 25rem;
+  }
+  .adaptive-logo{
+    height: 7.5rem;
+  }
+  .adaptive-name{
+    font-size: 1.6rem;
+    background-color: transparent;
+  }
+  .adaptive-header{
+    font-size: 1.5rem;
+    background-color:transparent;
+  }
+  .adaptive-bg{
+    background-size:cover;
+    background-image: url('../media/bg-md.png');
+  }
+}
+@media only screen and (min-width: 1025px) {
+  .adaptive-slides {
+    height: 35rem;
+  }
+  .adaptive-bg-3{
+    background-size:cover;
+    background-image: url('../media/bg3.png');
+  }
+  .adaptive-name{
+    font-size: 2.25rem;
+  }
+  .adaptive-header{
+    background-size:cover;
+    background-color:transparent;
+  }
+  .adaptive-bg{
+    background-size:cover;
+    background-image: url('../media/bg.png');
+  }
+  .adaptive-bg-3 p{
+    font-size: 1.4rem;
+  }
+}
