@@ -2,16 +2,24 @@ var mySwiper = new Swiper('.swiper-container', {
     speed: 400,
     spaceBetween: 0,
     loop:true,
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
+    loadPrevNextAmount:3,
+    lazy: true,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
 });
 $('#prev').click(function(){
-    mySwiper.slidePrev();
+    mySwiper[0].slidePrev();
 });
 $('#next').click(function(){
-    mySwiper.slideNext();
+    mySwiper[0].slideNext();
+});
+$('#prev2').click(function(){
+    mySwiper[2].slidePrev();
+});
+$('#next2').click(function(){
+    mySwiper[2].slideNext();
 });
 
 window.onscroll = function() {myFunction()};
@@ -40,21 +48,21 @@ $('#photosBtn').click(function(){
 });
 $('#guaranteeBtn').click(function(){
     $('html,body').animate({
-        scrollTop: $("#guarantee").offset().top-$('#guarantee').innerHeight()/6
+        scrollTop: $("#guarantee").offset().top-$('#guarantee').innerHeight()*0.1
     }, 'slow');
 });
 $('#schemeBtn').click(function(){
     $('html,body').animate({
-        scrollTop: $("#scheme").offset().top-$('#scheme').innerHeight()/6
+        scrollTop: $("#scheme").offset().top-$('#scheme').innerHeight()*0.1
     }, 'slow');
 });
 $('#commentsBtn').click(function(){
     $('html,body').animate({
-        scrollTop: $("#comments").offset().top-$('#comments').innerHeight()/6
+        scrollTop: $("#comments").offset().top-$('#comments').innerHeight()*0.1
     }, 'slow');
 });
 $('#makemoneyBtn').click(function(){
     $('html,body').animate({
-        scrollTop: $("#makemoney").offset().top-$('#makemoney').innerHeight()/6
+        scrollTop: $("#makemoney").offset().top-$('#makemoney').innerHeight()*0.1
     }, 'slow');
 });
