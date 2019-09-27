@@ -9,6 +9,9 @@ var mySwiper = new Swiper('.swiper-container', {
         prevEl: '.swiper-button-prev',
       },
 });
+$('#comments').hide();
+$("#comments").animate({height: "0px"});
+
 $('#prev').click(function(){
     mySwiper[0].slidePrev();
 });
@@ -20,4 +23,12 @@ $('#prev2').click(function(){
 });
 $('#next2').click(function(){
     mySwiper[2].slideNext();
+});
+$("#more-comm").click(function(){
+    $('#comments').show();
+    $("#comments").animate({height: "100%"});
+});
+$("#hide-comm").click(function(){
+    $('#comments').hide();
+    $("#comments").animate({height: "0px"});
 });
