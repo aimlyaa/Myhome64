@@ -10,7 +10,7 @@ var mySwiper = new Swiper('.swiper-container', {
       },
 });
 $('#comments').hide();
-$("#comments").animate({height: "0px"});
+$('#serts').hide();
 
 $('#prev').click(function(){
     mySwiper[0].slidePrev();
@@ -26,9 +26,13 @@ $('#next2').click(function(){
 });
 $("#more-comm").click(function(){
     $('#comments').show();
-    $("#comments").animate({height: "100%"});
 });
 $("#hide-comm").click(function(){
     $('#comments').hide();
-    $("#comments").animate({height: "0px"});
+});
+$("#show-serts").click(function(){
+    $('#serts').show();
+});
+$("#hide-serts").click(function(){
+    $('#serts').hide();
 });
