@@ -1,3 +1,6 @@
+let commButtonUsed=false;
+let sertsButtonUsed=false;
+
 var mySwiper = new Swiper('.swiper-container', {
     speed: 400,
     spaceBetween: 0,
@@ -25,14 +28,30 @@ $('#next2').click(function(){
     mySwiper[2].slideNext();
 });
 $("#more-comm").click(function(){
-    $('#comments').show();
+    if (!commButtonUsed){
+        $('#comments').show();
+        commButtonUsed=true;
+    }
+    else{
+        $('#comments').hide();
+        commButtonUsed=false;
+    }
 });
 $("#hide-comm").click(function(){
     $('#comments').hide();
+    commButtonUsed=false;
 });
 $("#show-serts").click(function(){
-    $('#serts').show();
+    if (!sertsButtonUsed){
+        $('#serts').show();
+        sertsButtonUsed=true;
+    }
+    else{
+        $('#serts').hide();
+        sertsButtonUsed=false;
+    }
 });
 $("#hide-serts").click(function(){
     $('#serts').hide();
+    sertsButtonUsed=false;
 });
