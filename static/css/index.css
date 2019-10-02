@@ -74,7 +74,7 @@
     background-image: url('../media/bg-sm.png');
   }
 }
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 768px) {
   .adaptive-serts{
     font-size: 2.6rem;
     -webkit-clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%); 
