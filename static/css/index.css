@@ -1,7 +1,10 @@
+/*фото в слайдах*/
 .swiper-slide {
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
+/*кастомные стрелки влево, вправо*/
 .swiper-button-prev {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") !important;
 }
@@ -9,36 +12,29 @@
 .swiper-button-next {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") !important;
 }
-/* adaptive */
+/* адаптив */
 @media only screen and (min-width: 0px) {
   .adaptive-serts{
     font-size: 1.5rem;
-    width: 100%;
-    margin:0;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
-    background-color:#d64448;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
   .adaptive-prem{
     font-size: 1.6rem;
   }
   .adaptive-slides {
-    width: 100%;
     height: 25rem;
   }
   .adaptive-slides-2 {
-    width: 100%;
-    height: 15rem;
+    height: 25rem;
   }
   .adaptive-slides-3 {
-    width: 100%;
     height: 15rem;
   }
   .adaptive-bg-7{
-    background-image:url('../media/bg-7-sm.png'); 
+    background: url('../media/bg-7-sm.png') 100% 100% no-repeat;
     background-size:100% 100%;
-    background-position:center; 
-    background-repeat: no-repeat;
+    background-position:center;
   }
   .adaptive-bg-6{
     background-image:url('../media/bg-6-sm.png'); 
@@ -56,18 +52,8 @@
     background-size:cover;
     background-image: url('../media/bg3-sm.png');
   }
-  .adaptive-bg-3 p{
-    text-align: justify;
-    color: #f8f9fa;
-    font-size: 1.2rem;
-  }
   .adaptive-name{
     font-size: 1.4rem;
-    background-color: #f8f9fa;
-  }
-  .adaptive-header{
-    font-size: 1.6rem;
-    background-color: #f8f9fa;
   }
   .adaptive-bg{
     background-size:cover;
@@ -77,9 +63,8 @@
 @media only screen and (min-width: 768px) {
   .adaptive-serts{
     font-size: 2.6rem;
-    -webkit-clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%); 
-    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%); 
-    background-color:#d64448;
+    -webkit-clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
   }
   .adaptive-bg-7{
     background-image:url('../media/bg-7.png');
@@ -97,7 +82,7 @@
     height: 25rem;
   }
   .adaptive-slides-2 {
-    height: 30rem;
+    height: 35rem;
   }
   .adaptive-slides-3 {
     height: 15rem;
@@ -107,15 +92,10 @@
   }
   .adaptive-name{
     font-size: 1.6rem;
-    background-color: transparent;
-  }
-  .adaptive-header{
-    font-size: 1.5rem;
-    background-color:transparent;
   }
   .adaptive-bg{
-    background-size:cover;
     background-image: url('../media/bg-md.png');
+    background-size:cover;
   }
 }
 @media only screen and (min-width: 1025px) {
@@ -123,7 +103,7 @@
     height: 35rem;
   }
   .adaptive-slides-2 {
-    height: 43rem;
+    height: 45rem;
   }
   .adaptive-slides-3 {
     height: 25rem;
@@ -133,11 +113,7 @@
     background-image: url('../media/bg3.png');
   }
   .adaptive-name{
-    font-size: 2.25rem;
-  }
-  .adaptive-header{
-    background-size:cover;
-    background-color:transparent;
+    font-size: 2.20rem;
   }
   .adaptive-bg{
     background-size:cover;
